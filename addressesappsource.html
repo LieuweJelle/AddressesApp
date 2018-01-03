@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Source code AddressesApp</title>
+ 	<link rel="stylesheet" href="prism.css" />
+	<style>
+		#bigdiv { margin:0px; padding: 0px; width:1172px; height:500px; border-top:1px solid #A8015C; border-bottom:1px solid #A8015C; border-right:1px solid #A8015C; overflow:auto; }
+		.precode { margin: 10px auto; width:1152px; text-align:center; border:1px solid #ac0000; font-size:10pt; } 
+		textarea { background-color: #efefef; }
+	</style>
+</head>
+<body>
+<div id="bigdiv">
+<div id="precode" class="precode"><pre><code class="language-markup"><textarea>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>addressesapp</title>
+	<link rel="stylesheet" type="text/css" href="members.css" />
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="FileSaver.js"></script>
+	<script src="pre-script.js"></script>
+</head>
+<body>
+<table class="table"><tr><td><div id="adddiv">
+	<div class='main'><span class='namefield'>&nbsp;</span><h3>Adressen toevoegen</h3>
+		<div id='fieldspace'></div><span class='namefield'>Voornaam</span>
+		<input type='text' size='46'	maxlength='40' name='forename' id='forename' /><br />
+		<div id='fieldspace'></div><span class='namefield'>Achternaam</span>
+		<input type='text' size='46'	maxlength='40' name='lastname' id='lastname' /><br />
+		<div id='fieldspace'></div><span class='namefield'>Adres</span>
+		<input type='text' size='46' maxlength='40' name='address' id='address' /><br />
+		<div id='fieldspace'></div><span class='namefield'>Postcode</span>
+		<input type='text' size='46'	maxlength='7' name='zipcode' id='zipcode' /><br />
+		<div id='fieldspace'></div><span class='namefield'>Woonplaats</span>
+		<input type='text' size='46'	maxlength='40' name='city' id='city' /><br />
+		<div id='fieldspace'></div><span class='namefield'>Telefoon</span>
+		<input type='text' size='46'	maxlength='10' name='telephone' id='telephone' /><br />
+		<div id='fieldspace'></div><span class='namefield'>Email</span>
+		<input type='text' size='46' maxlength='40' name='email' id='email' /><br />
+		<div id='fieldspace'></div><div id='fieldspace'></div>   
+		<!-- <span class='namefield'>&nbsp;</span> -->
+		<button id="add" class='button'>Gegevens Toevoegen</button>
+		<button id="reset" class='button'>Opnieuw</button>
+	</div></div>
+</td><td>
+	<div id="editdiv"></div>
+</td></tr></table>
+
+<div class='main'>
+	<table class="table1" cellpadding="0" cellspacing="0" border="0">
+	<tr><td><img src="clear.gif" width="1px" height="5px"></td></tr>
+	<tr>
+		<td align="left"><span class="user_list_header"><img src="clear.gif" width="10px" height="1px">Adressen boekje</span></td>
+		<td align="center"><span class="user_list_options"><span class="hide">[</span>&nbsp;
+		<a href="" onclick="event.preventDefault();" id="xadd">Adressenbestand toevoegen</a>&nbsp;<span class="hide">]</span></span></td>
+		<td align="right"><span class="user_list_options">[ <a href="" onclick="event.preventDefault();" id="submit2">Alle gegevens opslaan</a> |
+		<a href="" onclick="event.preventDefault();" id="xdel">Alle gegevens wissen</a> ]<img src="clear.gif" width="10px" height="1px"></span></td>
+	</tr>
+	<!-- <tr><td><img src="clear.gif" width="1px" height="1px"></td></tr> -->
+	</table><div id='fieldspace'></div><div id="fieldspace"></div>
+	<table class="table1" cellpadding="0" cellspacing="0" border="0" bgcolor="#000000"><tr><td>
+		<table id="flextable" cellspacing="1" cellpadding="3" border="0" width="100%">
+		<thead><tr class='header'>
+			<td><span class="user_table_col_label">Nr.</span></td>
+			<td><span class="user_table_col_label">Naam</span></td>
+			<td><span class="user_table_col_label">Achternaam</span></td>
+			<td><span class="user_table_col_label">Adres</span></td>
+			<td><span class="user_table_col_label">Postcode</span></td>
+			<td><span class="user_table_col_label">Woonplaats</span></td>
+			<td><span class="user_table_col_label">Telefoon</span></td>
+			<td><span class="user_table_col_label">Email</span></td>
+			<td colspan="2"><span class="user_table_col_label">Mutaties</span></td>
+		</tr></thead>
+		<tbody id="tablehelper"></tbody>
+		<!-- <tbody id="tablehelper2"></tbody> -->
+		</table></td></tr>
+	</table>
+	
+	<div id='fieldspace'></div><div id="fieldspace"></div>
+	<button id="sort1" class="button" name="sort">Index op voornaam</button>
+	<button id="sort2" class="button" name="sort">Index op achternaam</button><br /><br />
+	<div id="fieldspace"></div><div id="fieldspace"></div>
+
+	<button id="json" class="button" name="json" onclick="$('#textarea').toggle(2000);">jSon Bekijken</button><br />
+	<textarea id="textarea" class="textarea" rows="9" cols="50" readonly>&lt;/textarea>
+	<div id="fieldspace"></div><div id="fieldspace"></div>
+	
+	<button id="broncode" class="button" name="broncode" onclick="$('#aas').toggle(2000);">Broncode Bekijken</button><br />
+	<iframe src="addressesappsource.html" width="1184" height="510" id="aas" class="aas"></iframe>
+	<div id="fieldspace"></div><div id="fieldspace"></div>
+	
+	<button id="csscode" class="button" name="csscode" onclick="$('#css').toggle(2000);">Style sheet Bekijken</button><br />
+	<iframe src="memberssource.html" width="1184" height="310" id="css" class="css"></iframe>
+	<div id="fieldspace"></div><div id="fieldspace"></div>
+	
+	<button id="js1code" class="button" name="js1code" onclick="$('#js1').toggle(2000);">pre-script.js Bekijken</button><br />
+	<iframe src="pre-scriptsource.html" width="1184" height="510" id="js1" class="js1"></iframe>
+	<div id="fieldspace"></div><div id="fieldspace"></div>
+	
+	<button id="js2code" class="button" name="js2code" onclick="$('#js2').toggle(2000);">post-script.js Bekijken</button><br />
+	<iframe src="post-scriptsource.html" width="1184" height="510" id="js2" class="js2"></iframe>
+	<div id="fieldspace"></div><div id="fieldspace"></div>
+	
+	<button id="upload" class="button" name="upload" onclick="$('#uploaddiv').slideToggle(2000);">jSon Uploaden</button><br />
+	<div id="uploaddiv" class="uploaddiv">
+		<input type="file" id="myFile" multiple size="50" onchange="uploadJsonFile()" />
+		<p id="demo"></p>
+	</div>
+	<div id="fieldspace"></div><div id="fieldspace"></div>
+
+	<button id="help" class="button" name="help" onclick="$('#textarea1').toggle(2000);">help ???</button><br />
+	<textarea id="textarea1" class="textarea" rows="11" cols="105" readonly>&lt;/textarea>
+	<div id="fieldspace"></div><div id="fieldspace"></div>
+
+	<input type="submit" id="submit" class="button" value="Alle Gegevens Opslaan" name="submit" /><br />
+	<br />
+</div>
+<script src="post-script.js"></script>
+</body>
+</html>
+</textarea></code></pre></div>
+</div>
+<script src="prism.js"></script>
+</body>
+</html>

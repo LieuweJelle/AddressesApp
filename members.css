@@ -1,0 +1,62 @@
+@font-face {
+	font-family: 'SansationLight';
+	src: url('./SansationLight.eot');
+	src: local('SansationLight'), url('./SansationLight.woff') format('woff'), url('./SansationLight.ttf') format('truetype');
+}
+* { font-family: 'SansationLight' !important; }
+body { margin:0px auto; text-align:center; }
+h3 { color:purple; text-align:center; margin-top: 0.67em; margin-bottom: 0.67em; }
+#fieldspace { width:250px; height:2px;	}
+.main {  text-align:center; color:#666666; }
+.table { margin:0px auto;  } 
+.table1 { margin:0px auto; max-width:1050px; min-width:1050px; } 
+.namefield { font-size: 12pt; font-weight:bold; float:left; width:150px; color: #440000; }
+.hide-me { visibility: hidden; opacity: 0; transform: scale(.75); }
+.textarea { border:1px solid #A8015C; background: #f5f2f0;}
+.uploaddiv { margin:0px auto; padding:10px; width: 200px; border:1px solid #A8015C; background: #f5f2f0; }
+
+.user_table_col_label	{ font-size:12px; color:#fff; background:#666666; font-weight:bold; }
+.user_table_col_label1	{ font-size:14px; color:#fff; background:#666666; /*#A8015C;*/ font-weight:bold; }
+.user_table_txt			{ font-size:14px; color:#440000; font-weight:bold; }
+.user_table_txt1		{ font-size:14px; color:#A8015C; font-weight:bold; }
+.user_table_txt2		{ font-size:14px; color:purple; font-weight:bold; }
+
+.user_list_header	{ font-size:16px; font-weight:bold; color:#A8015C; }
+
+.user_list_options { font-size:14px; color: #000000; font-weight:bold; }
+.user_list_options a:link		{ color:#A8015C; }
+.user_list_options a:visited		{ color:#A8015C; }
+.user_list_options a:active	{ color:purple; }
+.user_list_options a:hover		{ color:purple; }
+
+.user_table_a { font-size:12px;	font-weight:bold; }
+.user_table_a a:link		{ color:#A8015C; }
+.user_table_a a:visited		{ color:#A8015C; }
+.user_table_a a:active	{ color:purple; }
+.user_table_a a:hover		{ color:purple; }
+
+tr.header { background:#666666; }
+tr:nth-child(even).inner  { background:#dddddd; }
+tr:nth-child(odd).inner  { background: #ffffff; }
+tr.inner:hover { background: #f5e5f5; }
+.button {
+	background: -webkit-linear-gradient(top, rgba(196,196,196,0), rgba(196,196,196,1)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom, rgba(196,196,196,0), rgba(196,196,196,1)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom, rgba(196,196,196,0), rgba(196,196,196,1)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, rgba(196,196,196,0), rgba(196,196,196,1)); /* Standard syntax (must be last) */
+   -webkit-border-radius: 5px;
+	 -o-border-radius: 5px;
+   -moz-border-radius: 5px;
+	 border-radius     :5px;
+	 -webkit-box-shadow:2px 2px 2px #888;
+	 -o-box-shadow:2px 2px 2px #888;
+	 -moz-box-shadow   :2px 2px 2px #888;
+	 box-shadow        :2px 2px 2px #888; }
+.button:hover {
+	display: inline;
+	 -webkit-box-shadow:4px 4px 4px #888;
+	 -o-box-shadow:4px 4px 4px #888;
+	 -moz-box-shadow   :4px 4px 4px #888;
+	 box-shadow        :4px 4px 4px #888;
+}
+.aas, .css, .js1, .js2 { margin:0px; padding: 0px; border: 0px; }
